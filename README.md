@@ -141,4 +141,4 @@ procdash --list --filter python
 
 ## 📄 License
 
-Licensed under the [MIT License](LICENSE).
+Distributed under the [MIT License](LICENSE).
