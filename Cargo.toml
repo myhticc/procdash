@@ -1,0 +1,25 @@
+[package]
+name = "procdash"
+version = "0.1.0"
+edition = "2021"
+authors = ["myhticc", "Claude <noreply@anthropic.com>"]
+description = "A blazingly fast terminal UI & CLI for inspecting active ports, monitoring real-time CPU/RAM usage, and killing processes with a single keystroke."
+license = "MIT"
+readme = "README.md"
+keywords = ["tui", "ports", "process", "monitor", "ratatui"]
+categories = ["command-line-utilities", "development-tools", "network-programming"]
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+crossterm = "0.28"
+netstat2 = "0.9"
+ratatui = "0.29"
+sysinfo = "0.32"
+unicode-width = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
